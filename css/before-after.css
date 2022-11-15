@@ -1,0 +1,12 @@
+.card-luxury::before{
+    content: '';
+    display: block;
+    background-image: url(../images/icon-luxury.svg);
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 2.5em;
+}
+
+.card-luxury::before{
+    content: url(../images/icon-luxury.svg);
+}

@@ -1,0 +1,93 @@
+.container{
+    min-width: var(--min-width);
+}
+.card{
+    padding: 2em;
+}
+.card-sedans{
+  background-color: var(--primary-color-1);
+  
+  border-radius: var(--border-radius-2) var(--border-radius-2)  0 0;
+}
+
+    .card-sedans .btn{
+        color: var(--primary-color-1);
+    }
+
+.card-suvs{
+    background-color: var(--primary-color-2);
+}
+    .card-suvs .btn{
+        color: var(--primary-color-2);
+    }
+
+.card-luxury{
+    background-color: var(--primary-color-3);
+    border-radius: 0 0 var(--border-radius-2) var(--border-radius-2);
+}
+    .card-luxury .btn{
+        color: var(--primary-color-3);
+    }
+
+
+.card-text{
+    line-height: 2;
+    color: var(--neutral-color-1)
+}
+
+.card-title{
+    color: var(--neutral-color-2);
+}
+
+
+.btn,
+.body{
+  background-color: var(--neutral-color-2);  
+}
+
+.btn{
+    /* padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;  
+    padding-bottom: .5em;  */
+    padding: .5em 1em;
+    border-radius: var(--border-radius-2);
+    transition: all .5s ease-in-out; 
+}
+.btn:hover{
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+        /* transition: all .5s ease-in-out; */
+        background-color: transparent;
+        color: var(--neutral-color-2);
+        outline-style: solid;
+        outline-color: var(--neutral-color-2);
+        outline-width: 1px;
+    }
+
+
+    /* Diseño desktop viewport height*/
+
+@media (min-width: 800px) {
+  .body{
+    display: flex;
+    min-height: 100vh;
+  }
+  .container{
+    /* display: flex; */
+    margin: auto;
+    padding: 4em;   
+    max-width: var(--max-width);
+  }
+
+  .card-sedans{    
+    border-radius: var(--border-radius-2) 0  0 var(--border-radius-2);
+  }
+
+  .card-luxury{
+    border-radius: 0 var(--border-radius-2) var(--border-radius-2) 0;
+    }
+
+}
+

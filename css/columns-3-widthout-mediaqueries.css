@@ -1,0 +1,18 @@
+*{
+ margin: 0; /*Pongo este margin para que los márgenes no interfieran en el cálculo  */
+}
+.container{
+    --width-mobil: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card{
+    flex-grow: 1;
+    /* flex-shrink: -1; */
+    /*
+    La función max coge el valor positivo más grande.
+    El truco es fijar el tamaño de columna que queramos por defecto (nuestro ancho de pantalla mínimo). Si se lo restamos al vw si es más grande este último es positivo por lo tanto con grow a 1 tiene que crecer todo lo que pueda.
+    Si es negativo coge 0px sí o sí pues es más grande y se reparten con flex al fijar el tam a 0px pues caben todas las columnas
+    */
+    flex-basis:max(0px, (var(--width-mobil) - 100vw)*1000);
+  }   
