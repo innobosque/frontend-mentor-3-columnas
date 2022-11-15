@@ -53,6 +53,7 @@
     padding: .5em 1em;
     border-radius: var(--border-radius-2);
     transition: all .5s ease-in-out; 
+    white-space: nowrap;
 }
 .btn:hover{
         transition-property: all;
@@ -69,16 +70,24 @@
 
     /* Diseño desktop viewport height*/
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .body{
     display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    font-size: clamp(1.2em,2vw,1.5em);
   }
   .container{
-    /* display: flex; */
-    margin: auto;
-    padding: 4em;   
+    display: flex; 
     max-width: var(--max-width);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70vh;
   }
 
   .card-sedans{    
